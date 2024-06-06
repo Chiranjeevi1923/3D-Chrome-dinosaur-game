@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Rex run - 3D</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+    <div class="loading-container">
+        <div class="loading-text">
+            <span>Loading...</span>
+            <span class="parcentage-text">0%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 0%;"></div>
+        </div>
+    </div>
+    <div class="score-container">
+        Score: <span class="score-text">0</span>
+    </div>
+    <div class="game-over-container d-none">
+        <div class="game-over-text">Game Over</div>
+        <div class="restart-button">
+            <button id="restart-game">Restart</button>
+        </div>
+    </div>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

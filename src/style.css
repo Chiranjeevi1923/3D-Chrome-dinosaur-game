@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.loading-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(7, 7, 7, 0.61), rgba(7, 7, 7, 0.527)), url('../static/images/game_thumbnail.png');
+    background-size: cover;
+    color: #fff;
+    flex-direction: column;
+    transition: opacity 0.75s ease-in-out;
+    font-family: "Press Start 2P", sans-serif;
+}
+
+.loading-text {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #dbf3f2;
+}
+
+.progress-bar {
+    width: 50%;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 20px;
+    background-color: #51ccf1;
+    transition: width 0.3s ease-in-out;
+}
+
+.score-container {
+    min-width: 300px;
+    padding: 2rem;
+    position: absolute;
+    right: 0rem;
+    /* top: 2rem; */
+    /* border: 1px solid #686464; */
+    border-radius: 5px;
+    /* text-align: center; */
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 1.5rem;
+}
+
+.game-over-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(7, 7, 7, 0.61), rgba(7, 7, 7, 0.527));
+    font-size: 2rem;
+    color: #fff;
+    flex-direction: column;
+    transition: opacity 0.75s ease-in-out;
+    font-family: "Press Start 2P", sans-serif;
+}
+
+.game-over-container button {
+    padding: 10px 20px;
+    background-color: #226c83;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}

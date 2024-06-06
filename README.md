@@ -1,4 +1,4 @@
-# 3D-dinosaur-game
+# 3D-Chrome-dinosaur-game
 Immerse yourself in a thrilling 3D dinosaur adventure game built with Three.js, GSAP and JavaScript.
 
 https://github.com/Chiranjeevi1923/3D-Chrome-dinosaur-game/assets/58211426/277da195-ee37-40c0-8de7-c9ea18c00a96

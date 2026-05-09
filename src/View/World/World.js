@@ -93,4 +93,14 @@ export default class World {
         })
     }
 
+    pauseGame() {
+        this.player?.pauseAnimation();
+        this.plane?.pauseAnimation();
+    }
+
+    resumeGame() {
+        this.player?.resumeAnimation();
+        this.plane?.resumeAnimation();
+    }
+
 }

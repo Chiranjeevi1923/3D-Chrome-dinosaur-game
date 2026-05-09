@@ -34,6 +34,7 @@ export default class View {
         this.loadPercentage = 0;
         this.isGameOver = false;
         this.isCameraAnimationComplete = false;
+        this.isPaused = false;
 
 
         // DOM elements
@@ -69,6 +70,8 @@ export default class View {
         this.camera.event.on('cameraAnimationComplete', () => {
             this.isCameraAnimationComplete = true;
         })
+
+        this.addPausePlayListener();
     }
 
     loadTheGame() {
@@ -91,6 +94,24 @@ export default class View {
 
     }
 
+    addPausePlayListener() {
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 'p') {
+                this.togglePause();
+            }
+        }, false);
+    }
+
+    togglePause() {
+        this.isPaused = !this.isPaused;
+
+        if (this.isPaused) {
+            this.world.pauseGame();
+        } else {
+            this.world.resumeGame();
+        }
+    }
+
     update(elapsedTime, deltaTime) {
         this.camera.update()
         this.renderer.update()
@@ -100,6 +121,10 @@ export default class View {
             return;
         }
 
+        // If the game is paused, skip world updates
+        if (this.isPaused) {
+            return;
+        }
 
         this.world.updateBackground()
         this.world.updatePlayer()

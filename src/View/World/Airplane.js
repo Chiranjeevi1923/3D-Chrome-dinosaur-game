@@ -101,6 +101,18 @@ export const plane = (() => {
             this.mesh.quaternion.copy(this.quaternion);
             this.mesh.scale.setScalar(this.scale);
         }
+
+        pauseAnimation() {
+            if (this.mixer) {
+                this.mixer.timeScale = 0;
+            }
+        }
+
+        resumeAnimation() {
+            if (this.mixer) {
+                this.mixer.timeScale = 1;
+            }
+        }
     }
 
     return {

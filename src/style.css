@@ -75,6 +75,29 @@ body {
     font-size: 1.5rem;
 }
 
+.guide-container {
+    padding: 1.5rem;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 0.8rem;
+    color: #000;
+    line-height: 1.8;
+}
+
+.guide-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #0847f3;
+    text-decoration: underline;
+}
+
+.guide-text {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
 .game-over-container {
     position: absolute;
     left: 0;
